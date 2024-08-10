@@ -1,0 +1,26 @@
+{% extends './layouts/layouts.html' %}
+
+{% block title %} {{title}}  {% endblock %}
+
+
+{% block userlist %}
+<h1 align="center">User Information</h1>
+<table border="1" align="center" width="300px">
+    <tr align="center">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Action</th>
+    </tr>
+    {% for user in info %}
+    <tr align="center">
+        <td>{{ user[0] }}</td>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+        <td><button>Delete</button></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
